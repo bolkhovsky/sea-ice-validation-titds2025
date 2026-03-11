@@ -27,13 +27,14 @@ In **29.6%** of forecasts (95% CI: 29.0–30.3%), RMSE indicates acceptable qual
 
 ## Data
 
-**Source:** EUMETSAT OSI SAF sea ice concentration Climate Data Record (CDR v3p0) and Interim CDR (ICDR v3p0).
+**Source:** EUMETSAT OSI SAF sea ice concentration Climate Data Record (CDR v3p0, 2019–2020) and Interim CDR from archive (ICDR, 2021–2024). Both available via anonymous FTP from `osisaf.met.no`.
 
-- Grid: EASE-Grid 2.0, 25 km resolution (625 km²/cell)
+- Native grid: EASE-Grid 2.0, 12.5 km resolution (NH)
+- Effective resolution: 25 km (subsampled every 2nd pixel during preprocessing, 625 km²/cell)
 - Period: 2019–2024 (training: 2019–Nov 2021; test: Jan 2022–Dec 2024)
 - Region: Kara Sea (65–82°N, 55–100°E) and Laptev Sea (70–82°N, 100–145°E)
 
-To download the raw data (~2 GB):
+To download the raw data (~2.5 GB, ~2,192 files):
 
 ```bash
 python data/download_osisaf.py
