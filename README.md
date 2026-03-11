@@ -76,7 +76,15 @@ jupyter notebook notebooks/validation_experiment.ipynb
 | U-Net | **35.0%** | 0.049 | 0.463 |
 | ConvLSTM | 30.2% | 0.051 | 0.467 |
 
-Disagreement = RMSE < 0.10 but ME/IIEE > 0.50 (forecast appears good by traditional metrics but has dangerous ice edge displacement).
+Disagreement = RMSE < 0.10 but ME/IIEE > 0.50 (forecast appears good by traditional metrics but has dangerous ice edge displacement). Non-trivial filter: IIEE >= 31,250 km² (50 cells × 625 km²).
+
+## Verification
+
+Results independently reproduced on a separate VPS (RTX 3090, TensorFlow 2.16.1). SHA256 of `results/all_validation_results.csv`:
+
+```
+09b58972ab13e8af506bd44dd790951bf74b04f2d0b90579d7053eaf6f26329d
+```
 
 ## Citation
 
